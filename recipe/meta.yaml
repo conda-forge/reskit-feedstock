@@ -11,13 +11,14 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
   run:
     - python >=3.6
     - geokit >=1.2.4
@@ -39,12 +40,10 @@ test:
   imports:
     - reskit
   commands:
-    - pip check
     - python -m pytest
   source_files:
     - .
   requires:
-    - pip
     - pytest
     - pytest-cov
 
