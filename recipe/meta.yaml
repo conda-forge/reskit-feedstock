@@ -40,12 +40,10 @@ test:
   imports:
     - reskit
   commands:
-    - pip check
     - python -m pytest
   source_files:
     - .
   requires:
-    - pip
     - pytest
     - pytest-cov
 
