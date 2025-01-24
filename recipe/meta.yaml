@@ -1,5 +1,5 @@
 {% set name = "reskit" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v{{ version }}.tar.gz
-  sha256: 25e8034cd86cea2aadb6b6bb7abffe960a8d38ff20671ba70f167369221e4649
+  sha256: 5a6ef1352c7377fef61a613f2de6c8adb6c9e304b6cb06e81f189add147b3658
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
