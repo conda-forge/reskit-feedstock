@@ -46,10 +46,11 @@ test:
     - reskit
   commands:
     - conda list
-    - python {{ python_min }} -m pytest
+    - {{ PYTHON }} -m pytest
   source_files:
     - .
   requires:
+    - python {{ python_min }}
     - pytest
     - pytest-cov
 
