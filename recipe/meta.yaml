@@ -1,3 +1,4 @@
+{% set python_min = "3.6" %}
 {% set name = "reskit" %}
 {% set version = "0.4.0" %}
 
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pip
     - matplotlib-base
     - descartes
@@ -44,7 +45,7 @@ test:
   imports:
     - reskit
   commands:
-    - python -m pytest
+    - python {{ python_min }} -m pytest
   source_files:
     - .
   requires:
