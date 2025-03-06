@@ -31,7 +31,7 @@ requirements:
     - scipy
     - scikit-learn
     - geokit >=1.4.0
-    - gdal=3.4.*
+    - gdal =3.4.*
     - netcdf4 >=1.5.3
     - xarray
     - pvlib-python =0.9.0
