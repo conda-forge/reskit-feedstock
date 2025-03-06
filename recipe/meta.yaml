@@ -29,7 +29,7 @@ requirements:
     - openpyxl
     - numpy 
     - numba
-    - scipy
+    - scipy <1.15
     - scikit-learn
     - geokit >=1.4.0
     - gdal =3.4
