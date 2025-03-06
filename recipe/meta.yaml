@@ -45,6 +45,7 @@ test:
   imports:
     - reskit
   commands:
+    - conda list
     - python {{ python_min }} -m pytest
   source_files:
     - .
