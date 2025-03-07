@@ -50,7 +50,7 @@ test:
   source_files:
     - .
   requires:
-    - python {{ python_min }}
+    - python ={{ python_min }}
     - pytest
     - pytest-cov
 
