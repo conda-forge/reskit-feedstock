@@ -46,7 +46,7 @@ test:
     - reskit
   commands:
     - conda list
-    - {{ PYTHON }} -m pytest
+    - python -m pytest
   source_files:
     - .
   requires:
