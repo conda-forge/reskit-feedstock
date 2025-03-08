@@ -1,5 +1,6 @@
+{% set python_min = "3.10" %}
 {% set name = "reskit" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,51 +8,58 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v{{ version }}.tar.gz
-  sha256: 25e8034cd86cea2aadb6b6bb7abffe960a8d38ff20671ba70f167369221e4649
+  sha256: 5a6ef1352c7377fef61a613f2de6c8adb6c9e304b6cb06e81f189add147b3658
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
-    - geokit >=1.2.4
-    - numpy <=1.21.4
-    - pandas
-    - scipy
-    - pvlib-python >=0.7.2, <0.9
-    - netcdf4 >=1.5.3
-    - xarray
+    - python >={{ python_min }}
+    - pip
     - matplotlib-base
     - descartes
-    - gdal >2.0.0, <3.0.0, !=2.4.4
+    - pandas <2.0.0
+    - openpyxl
+    - numpy 
+    - numba
+    - scipy <1.15
     - scikit-learn
+    - geokit >=1.4.0
+    - gdal =3.4
+    - netcdf4 >=1.5.3
+    - xarray
+    - pvlib-python =0.9.0
+    - windpowerlib
+    - jupyter 
     - papermill
-    - jupyter
-    - notebook
+    
+    
 
 test:
   imports:
     - reskit
   commands:
+    - conda list
     - python -m pytest
   source_files:
     - .
   requires:
+    - python ={{ python_min }}
     - pytest
     - pytest-cov
 
 about:
   home: 'https://github.com/FZJ-IEK3-VSA/reskit'
-  license: MIT
+  license: CC-BY-4.0
   license_file:
-    - LICENSE.txt
+    - CC-BY-4.0.txt
   summary: Renewable Energy Simulation toolkit
 
 extra:
