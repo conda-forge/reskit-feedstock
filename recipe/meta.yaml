@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "reskit" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v{{ version }}.tar.gz
-  sha256: 5a6ef1352c7377fef61a613f2de6c8adb6c9e304b6cb06e81f189add147b3658
+  sha256: c0ca88475bd5dfa4907f506fdc4d9cab0ea36aa511e4e220e58b343c886d2d5c
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - descartes
     - pandas <2.0.0
     - openpyxl
-    - numpy 
+    - numpy
     - numba
     - scipy <1.15
     - scikit-learn
@@ -37,10 +37,10 @@ requirements:
     - xarray
     - pvlib-python =0.9.0
     - windpowerlib
-    - jupyter 
+    - jupyter
     - papermill
-    
-    
+
+
 
 test:
   imports:
@@ -59,7 +59,7 @@ about:
   home: 'https://github.com/FZJ-IEK3-VSA/reskit'
   license: CC-BY-4.0
   license_file:
-    - CC-BY-4.0.txt
+    - LICENSE-CC-BY.txt
   summary: Renewable Energy Simulation toolkit
 
 extra:
