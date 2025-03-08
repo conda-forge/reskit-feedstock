@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/reskit-feedstoc
 
 Home: https://github.com/FZJ-IEK3-VSA/reskit
 
-Package license: MIT
+Package license: CC-BY-4.0
 
 Summary: Renewable Energy Simulation toolkit
 
