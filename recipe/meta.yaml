@@ -55,9 +55,10 @@ test:
 
 about:
   home: 'https://github.com/FZJ-IEK3-VSA/reskit'
-  license: CC-BY-4.0
+  license: CC-BY-4.0 AND MIT
   license_file:
     - LICENSE-CC-BY.txt
+    - LICENSE-MIT.txt
   summary: Renewable Energy Simulation toolkit
 
 extra:
