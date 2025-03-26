@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v{{ version }}.tar.gz
-  sha256: 8c08d5f8c4c2d6747d6c67479c076023a9876c17e0efd6344ea58609936ca2b0
+  sha256: 80ab6e60b67adc5f277fc75888c5ed532733259bc3556be2bab22877d9ff4abe
 
 build:
   noarch: python
