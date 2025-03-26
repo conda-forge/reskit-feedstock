@@ -48,8 +48,6 @@ test:
   commands:
     - conda list
     - python -m pytest
-  source_files:
-    - .
   requires:
     - python ={{ python_min }}
     - pytest
