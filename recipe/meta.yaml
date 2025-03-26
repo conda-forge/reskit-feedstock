@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -57,9 +57,10 @@ test:
 
 about:
   home: 'https://github.com/FZJ-IEK3-VSA/reskit'
-  license: CC-BY-4.0
+  license: CC-BY-4.0 AND MIT
   license_file:
     - LICENSE-CC-BY.txt
+    - LICENSE-MIT.txt
   summary: Renewable Energy Simulation toolkit
 
 extra:
