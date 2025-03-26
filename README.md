@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/reskit-feedstoc
 
 Home: https://github.com/FZJ-IEK3-VSA/reskit
 
-Package license: CC-BY-4.0
+Package license: CC-BY-4.0 AND MIT
 
 Summary: Renewable Energy Simulation toolkit
 
@@ -146,7 +146,4 @@ Feedstock Maintainers
 * [@chrisjwin](https://github.com/chrisjwin/)
 * [@julian-belina](https://github.com/julian-belina/)
 * [@phil-fzj](https://github.com/phil-fzj/)
-
-
-<!-- dummy commit to enable rerendering -->
 
