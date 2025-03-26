@@ -16,6 +16,8 @@ jobs:
   variables: {}
 
   steps:
+  - checkout: self
+    fetchDepth: 1
   # configure qemu binfmt-misc running.  This allows us to run docker containers
   # embedded qemu-static
   - script: |
