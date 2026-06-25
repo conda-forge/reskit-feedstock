@@ -12,3 +12,4 @@ noarch_platforms:
   - osx_64
   - osx_arm64
 clone_depth: 1
+conda_build_tool: rattler-build
