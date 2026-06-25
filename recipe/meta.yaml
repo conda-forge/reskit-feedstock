@@ -1,7 +1,7 @@
 {% set python_min = "3.10" %}
 {% set python_max = "3.12.12" %}
 {% set name = "reskit" %}
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v{{ version }}.tar.gz
-  sha256: 748959da36f136f529e5e3d69b8eaf97d605d345a26ead6404e9f4ff4934e867
+  sha256: 5c60878a28ab5d7eea297483b8fed24609b2de67d98173de352753ba906223fa
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python 
+    - python
     - python >={{ python_min }},<={{ python_max }}
     - papermill <=2.6.0
     - jupyter <=1.1.1
