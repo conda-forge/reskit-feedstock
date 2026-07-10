@@ -1,5 +1,5 @@
 context:
-  version: "0.4.4"
+  version: "0.5.0"
   python_min: "3.10"
   python_max: "3.12.12"
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FZJ-IEK3-VSA/RESKit/archive/v${{ version }}.tar.gz
-  sha256: 5c60878a28ab5d7eea297483b8fed24609b2de67d98173de352753ba906223fa
+  sha256: 1e196bc395d823fd519ef836fb83d31cd29b05cfc226d60d9fae247692796f29
 
 build:
   script: ${{ PYTHON }} -m pip install . --no-deps --no-build-isolation
@@ -18,47 +18,47 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - hatchling
-  - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
   run:
-  - python >=${{ python_min }},<=${{ python_max }}
-  - papermill <=2.7.0
-  - jupyter <=1.1.1
-  - pip <=26.1.1
-  - matplotlib <=3.10.5
-  - descartes <=1.1.0
-  - pandas >=1.4.0,<=2.3.3
-  - openpyxl <=3.1.5
-  - numpy >=1.21.5,<=1.26.4
-  - numba >=0.55,<=0.65.1
-  - scipy >=1.7.2,<=1.14.1
-  - scikit-learn >=1.3.0,<=1.9.0
-  - geokit >=1.4.0,<=1.9.0
-  - netcdf4 >=1.5.8,!=1.6.3,<=1.7.4
-  - xarray >=0.20.0,<=2026.4.0
-  - pvlib-python =0.9.0
-  - windpowerlib =0.2.1
-  - cdsapi <=0.7.7
+    - python >=${{ python_min }},<=${{ python_max }}
+    - papermill <=2.7.0
+    - jupyter <=1.1.1
+    - pip <=26.1.1
+    - matplotlib <=3.10.5
+    - descartes <=1.1.0
+    - pandas >=1.4.0,<=2.3.3
+    - openpyxl <=3.1.5
+    - numpy >=1.21.5,<=1.26.4
+    - numba >=0.55,<=0.65.1
+    - scipy >=1.7.2,<=1.14.1
+    - scikit-learn >=1.3.0,<=1.9.0
+    - geokit >=1.4.0,<=1.9.0
+    - netcdf4 >=1.5.8,!=1.6.3,<=1.7.4
+    - xarray >=0.20.0,<=2026.4.0
+    - pvlib-python =0.9.0
+    - windpowerlib =0.2.1
+    - cdsapi <=0.7.7
 
 tests:
-- script:
-    - pytest -n auto -vvv
-  requirements:
+  - script:
+      - pytest -n auto -vvv
+    requirements:
       run:
         - pytest
         - pytest-xdist
         - python ${{ python_min }}.*
-  files:
+    files:
       source:
         - .
 about:
   homepage: https://github.com/FZJ-IEK3-VSA/reskit
   summary: Renewable Energy Simulation toolkit
   license: CC-BY-4.0 AND MIT
-  license_file: 
-  - LICENSE-CC-BY.txt
-  - LICENSE-MIT.txt
+  license_file:
+    - LICENSE-CC-BY.txt
+    - LICENSE-MIT.txt
 
 extra:
   recipe-maintainers:
